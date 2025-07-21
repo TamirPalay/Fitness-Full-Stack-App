@@ -1,0 +1,116 @@
+/* src/styles/global.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+  }
+  
+  input, button {
+    font-family: inherit;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  .button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .primary {
+    background-color: #2ecc71;
+    color: white;
+    margin-right: 1rem;
+  }
+  
+  .secondary {
+    background-color: white;
+    color: #2ecc71;
+    border: 2px solid #2ecc71;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .popup h2 {
+    margin-bottom: 0.5rem;
+    color: #2ecc71; /* matching your green theme */
+  }
+  
+  .popup p {
+    margin-bottom: 1.5rem;
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .primary-btn {
+    background-color: #2ecc71;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  .primary-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  .secondary-btn {
+    background-color: #ecf0f1;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 6px;
+    color: #34495e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #bdc3c7;
+  }
+  
+  
+  
