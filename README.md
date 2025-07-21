@@ -1,3 +1,6 @@
+Trello Board
+https://trello.com/b/aJS9MRi4/customfit-phase-1
+
 # Fitness-Full-Stack-App
 Full-stack fitness tracking app using React, Spring Boot, and Firebase.
 A fully loaded workout and fitness app with unique features.
