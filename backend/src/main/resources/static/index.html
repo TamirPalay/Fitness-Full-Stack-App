@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CustomFIT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo">💪 CustomFIT</span>
+      <nav>
+        <button class="nav-btn active" data-page="workouts">Workouts</button>
+        <button class="nav-btn" data-page="exercises">Exercises</button>
+        <button class="nav-btn" data-page="builder">Build Workout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Workouts Page ──────────────────────────────────────── -->
+    <section id="page-workouts" class="page active">
+      <div class="page-header">
+        <h1>Workouts</h1>
+        <div class="tab-group">
+          <button class="tab active" data-tab="preset">Preset</button>
+          <button class="tab" data-tab="custom">My Workouts</button>
+        </div>
+      </div>
+      <div id="workout-list" class="card-grid"></div>
+    </section>
+
+    <!-- ── Exercises Page ─────────────────────────────────────── -->
+    <section id="page-exercises" class="page">
+      <div class="page-header">
+        <h1>Exercise Library</h1>
+      </div>
+      <div class="filters">
+        <div class="filter-group">
+          <label>Body Part</label>
+          <select id="filter-bodypart">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Equipment</label>
+          <select id="filter-equipment">
+            <option value="">All</option>
+          </select>
+        </div>
+        <button id="btn-clear-filters" class="btn-secondary">Clear</button>
+      </div>
+      <div id="exercise-list" class="exercise-grid"></div>
+    </section>
+
+    <!-- ── Builder Page ───────────────────────────────────────── -->
+    <section id="page-builder" class="page">
+      <div class="page-header">
+        <h1>Build a Workout</h1>
+      </div>
+
+      <div class="builder-layout">
+        <!-- Left: exercise picker -->
+        <div class="builder-panel">
+          <h2>Pick Exercises</h2>
+          <div class="filters">
+            <div class="filter-group">
+              <label>Body Part</label>
+              <select id="builder-filter-bodypart">
+                <option value="">All</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label>Equipment</label>
+              <select id="builder-filter-equipment">
+                <option value="">All</option>
+              </select>
+            </div>
+          </div>
+          <div id="builder-exercise-list" class="exercise-grid small"></div>
+        </div>
+
+        <!-- Right: workout editor -->
+        <div class="builder-panel">
+          <h2>Your Workout</h2>
+          <div class="workout-meta">
+            <input id="workout-name" type="text" placeholder="Workout name" />
+            <input id="workout-desc" type="text" placeholder="Description (optional)" />
+            <select id="workout-difficulty">
+              <option>Beginner</option>
+              <option selected>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+          <div id="builder-selected" class="selected-exercises"></div>
+          <div id="builder-empty" class="empty-state">
+            <p>Click exercises on the left to add them here.</p>
+          </div>
+          <button id="btn-save-workout" class="btn-primary full-width" disabled>Save Workout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Workout Detail Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
